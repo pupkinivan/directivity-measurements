@@ -3,10 +3,11 @@
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-from measurements import average_directivity_per_octave, Directivity, plot_sensitivity, plot_sonogram, Reference, \
-    Sensitivity, SmaartMeasurements
+from measurements import Directivity, Reference, Sensitivity, SmaartMeasurements
 
 # Read the XLSX files
+from plotting import average_directivity_per_octave, plot_sensitivity, plot_sonogram
+
 sens_df = pd.read_excel('Sensibilidad y Directividad - Curvas Smaart.xlsx', sheet_name='Sensibilidad')
 sens_values = sens_df.to_numpy()
 
